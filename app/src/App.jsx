@@ -44,7 +44,7 @@ function App() {
 
     try {
       setLoading(true)
-      const resp = await axios.post('https://arff-visualizer.onrender.com/api/load', formData, {
+      const resp = await axios.post('https://api-simulacion.onrender.com/api/load', formData, {
         headers: { 
           'Content-Type': 'multipart/form-data',
           'Accept': 'application/json',
@@ -83,16 +83,12 @@ function App() {
           darkMode ? 'bg-gray-800' : 'bg-white'
         }`}>
           {/* Header Banner */}
-          <div className="px-6 py-8 bg-gradient-to-r from-blue-600 to-indigo-600 relative overflow-hidden">
-            <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
-            <div className="relative">
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                Carga tu archivo ARFF
-              </h2>
-              <p className="text-blue-100 text-sm sm:text-base max-w-2xl">
-                Visualiza y analiza tus datos estructurados. Soporta archivos ARFF (Attribute-Relation File Format) 
-                con validación automática y visualización paginada.
-              </p>
+          <div className="px-8 py-12 bg-gradient-to-r from-[#1f2937] via-[#111827] to-[#0f172a] relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(37,99,235,0.15),transparent)]" />
+        <div className="relative">
+          <h2 className="text-3xl font-bold text-blue-400 mb-3 tracking-tight">
+            Carga tu archivo ARFF
+          </h2>
             </div>
           </div>
 
@@ -103,8 +99,8 @@ function App() {
             <div className="max-w-xl mx-auto">
               <div className={`flex justify-center w-full h-32 px-4 transition ${
                 darkMode 
-                  ? 'bg-gray-900 border-gray-700 hover:border-gray-500' 
-                  : 'bg-gray-50 border-gray-300 hover:border-gray-400'
+                  ? 'bg-gray-50 border-gray-700 hover:border-gray-500' 
+                  : 'bg-blue-900 border-gray-300 hover:border-gray-400'
               } border-2 border-dashed rounded-lg appearance-none cursor-pointer focus:outline-none`}>
                 <div className="flex items-center space-x-2">
                   <input
@@ -121,7 +117,7 @@ function App() {
                   >
                     {loading ? (
                       <div className={`flex items-center space-x-3 ${
-                        darkMode ? 'text-blue-400' : 'text-blue-600'
+                        darkMode ? 'text-white' : 'text-blue-600'
                       }`}>
                         <svg className="animate-spin h-8 w-8" fill="none" viewBox="0 0 24 24">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
@@ -132,12 +128,12 @@ function App() {
                     ) : (
                       <>
                         <svg className={`w-8 h-8 mb-2 ${
-                          darkMode ? 'text-gray-400' : 'text-gray-500'
+                          darkMode ? 'text-gray-400' : 'text-gray-50'
                         }`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                         </svg>
                         <div className={`text-center ${
-                          darkMode ? 'text-gray-300' : 'text-gray-600'
+                          darkMode ? 'text-gray-300' : 'text-white'
                         }`}>
                           <span className="font-medium">Haz clic para subir</span> o arrastra y suelta
                           <p className="text-xs mt-1">Solo archivos ARFF</p>
@@ -164,87 +160,6 @@ function App() {
               )}
             </div>
           </div>
-
-          {/* Stats Section */}
-          {showStats && (
-            <div className={`px-6 py-4 border-b ${
-              darkMode 
-                ? 'bg-gray-900/50 border-gray-700' 
-                : 'bg-gray-50 border-gray-200'
-            }`}>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className={`p-6 rounded-lg ${
-                  darkMode 
-                    ? 'bg-gray-800 ring-1 ring-white/10' 
-                    : 'bg-white shadow-lg'
-                }`}>
-                  <div className="flex items-center">
-                    <div className={`p-2 rounded-lg ${
-                      darkMode ? 'bg-blue-500/10' : 'bg-blue-50'
-                    }`}>
-                      <svg className="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                    </div>
-                    <div className="ml-4">
-                      <h3 className={`text-sm font-medium ${
-                        darkMode ? 'text-gray-400' : 'text-gray-500'
-                      }`}>Archivo</h3>
-                      <p className={`mt-1 text-xl font-semibold truncate max-w-[200px] ${
-                        darkMode ? 'text-white' : 'text-gray-900'
-                      }`}>{fileName}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className={`p-6 rounded-lg ${
-                  darkMode 
-                    ? 'bg-gray-800 ring-1 ring-white/10' 
-                    : 'bg-white shadow-lg'
-                }`}>
-                  <div className="flex items-center">
-                    <div className={`p-2 rounded-lg ${
-                      darkMode ? 'bg-purple-500/10' : 'bg-purple-50'
-                    }`}>
-                      <svg className="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                      </svg>
-                    </div>
-                    <div className="ml-4">
-                      <h3 className={`text-sm font-medium ${
-                        darkMode ? 'text-gray-400' : 'text-gray-500'
-                      }`}>Atributos</h3>
-                      <p className={`mt-1 text-xl font-semibold ${
-                        darkMode ? 'text-white' : 'text-gray-900'
-                      }`}>{attributes.length}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className={`p-6 rounded-lg ${
-                  darkMode 
-                    ? 'bg-gray-800 ring-1 ring-white/10' 
-                    : 'bg-white shadow-lg'
-                }`}>
-                  <div className="flex items-center">
-                    <div className={`p-2 rounded-lg ${
-                      darkMode ? 'bg-green-500/10' : 'bg-green-50'
-                    }`}>
-                      <svg className="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div className="ml-4">
-                      <h3 className={`text-sm font-medium ${
-                        darkMode ? 'text-gray-400' : 'text-gray-500'
-                      }`}>Total Filas</h3>
-                      <p className={`mt-1 text-xl font-semibold ${
-                        darkMode ? 'text-white' : 'text-gray-900'
-                      }`}>{allRows.length}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
 
           {/* Table Section */}
           {rows.length > 0 && (
