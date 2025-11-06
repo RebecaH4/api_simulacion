@@ -136,7 +136,7 @@ function App() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                         </svg>
                         <div className={`text-center ${
-                          darkMode ? 'text-gray-900' : 'text-gray-900'
+                          darkMode ? 'text-gray-600' : 'text-gray-900'
                         }`}>
                           <span className="font-medium">Haz clic para subir</span> o arrastra y suelta
                           <p className="text-xs mt-1">Solo archivos ARFF</p>
@@ -167,7 +167,7 @@ function App() {
           {/* Download Section */}
           {downloadUrl && !loading && (
             <div className={`p-8 text-center ${
-              darkMode ? 'bg-gray-800' : 'bg-white'
+              darkMode ? 'bg-white' : 'bg-white'
             }`}>
               <div className={`inline-flex items-center p-4 rounded-lg ${
                 darkMode ? 'bg-pink-900/50 text-pink-200' : 'bg-pink-50 text-pink-800'
@@ -175,12 +175,12 @@ function App() {
                 <svg className="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="font-medium">¡Archivo procesado!</span>
+                <span className="font-medium">Archivo procesado</span>
               </div>
               <div className="mt-6">
                 <a
                   href={downloadUrl}
-                  download="nsl_kdd_splits.zip"
+                  download="dataframe_processed.zip"
                   className={`inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm transition-colors ${
                     darkMode
                       ? 'text-white bg-pink-600 hover:bg-pink-700'
