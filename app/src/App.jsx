@@ -180,7 +180,7 @@ function App() {
               <div className="mt-6">
                 <a
                   href={downloadUrl}
-                  download="dataframe_processed.zip"
+                  download="Processed_dataframe.zip"
                   className={`inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm transition-colors ${
                     darkMode
                       ? 'text-white bg-pink-600 hover:bg-pink-700'
