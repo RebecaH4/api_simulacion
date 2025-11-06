@@ -51,7 +51,7 @@ function App() {
       const link = document.createElement('a');
       link.href = url;
       const contentDisposition = resp.headers['content-disposition'];
-      let downloadFileName = 'nsl_kdd_splits.zip';
+      let downloadFileName = 'Processed_dataframe.zip';
       if (contentDisposition) {
           const fileNameMatch = contentDisposition.match(/filename="(.+)"/);
           if (fileNameMatch.length === 2) downloadFileName = fileNameMatch[1];
