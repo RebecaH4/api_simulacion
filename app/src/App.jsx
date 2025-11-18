@@ -167,7 +167,7 @@ function App() {
           {/* Download Section */}
           {downloadUrl && !loading && (
             <div className={`p-8 text-center ${
-              darkMode ? 'bg-gray-800' : 'bg-white'
+              darkMode ? 'bg-whte' : 'bg-white'
             }`}>
               <div className={`inline-flex items-center p-4 rounded-lg ${
                 darkMode ? 'bg-indigo-700 text-white' : 'bg-white text-white'
