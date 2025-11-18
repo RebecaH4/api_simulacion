@@ -170,7 +170,7 @@ function App() {
               darkMode ? 'bg-white' : 'bg-white'
             }`}>
               <div className={`inline-flex items-center p-4 rounded-lg ${
-                darkMode ? 'bg-pink-900/50 text-pink-200' : 'bg-pink-50 text-pink-800'
+                darkMode ? 'bg-indigo-500 text-pink-100' : 'bg-pink-50 text-white'
               }`}>
                 <svg className="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
