@@ -36,7 +36,7 @@ function App() {
     try {
       setLoading(true)
       setDownloadUrl(null) // Limpiar URL de descarga anterior
-      const resp = await axios.post('https://arff-visualizer.onrender.com/api/load', formData, {
+      const resp = await axios.post('https://api-simulacion.onrender.com/api/load', formData, {
         headers: { 
           'Content-Type': 'multipart/form-data',
         },
@@ -51,7 +51,7 @@ function App() {
       const link = document.createElement('a');
       link.href = url;
       const contentDisposition = resp.headers['content-disposition'];
-      let downloadFileName = 'nsl_kdd_splits.zip';
+      let downloadFileName = 'Proccess_Data.zip';
       if (contentDisposition) {
           const fileNameMatch = contentDisposition.match(/filename="(.+)"/);
           if (fileNameMatch.length === 2) downloadFileName = fileNameMatch[1];
@@ -90,7 +90,7 @@ function App() {
             <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
             <div className="relative">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                Procesar archivos ARFF
+                Procedor de archivos ARFF
               </h2>
             </div>
           </div>
@@ -180,7 +180,7 @@ function App() {
               <div className="mt-6">
                 <a
                   href={downloadUrl}
-                  download="nsl_kdd_splits.zip"
+                  download="Proccess_Data.zip"
                   className={`inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm transition-colors ${
                     darkMode
                       ? 'text-white bg-pink-600 hover:bg-pink-700'
