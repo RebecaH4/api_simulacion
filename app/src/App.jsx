@@ -170,7 +170,7 @@ function App() {
               darkMode ? 'bg-white' : 'bg-white'
             }`}>
               <div className={`inline-flex items-center p-4 rounded-lg ${
-                darkMode ? 'bg-indigo-500 text-pink-100' : 'bg-pink-50 text-white'
+                darkMode ? 'bg-indigo-500 text-white' : 'bg-pink-50 text-white'
               }`}>
                 <svg className="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -183,8 +183,8 @@ function App() {
                   download="Processed_dataframe.zip"
                   className={`inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm transition-colors ${
                     darkMode
-                      ? 'text-white bg-pink-600 hover:bg-pink-700'
-                      : 'text-white bg-pink-600 hover:bg-pink-700'
+                      ? 'text-white bg-pink-500 hover:bg-pink-600'
+                      : 'text-white bg-pink-500 hover:bg-pink-600'
                   }`}
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
