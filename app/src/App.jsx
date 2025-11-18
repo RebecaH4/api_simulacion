@@ -102,7 +102,7 @@ function App() {
             <div className="max-w-xl mx-auto">
               <div className={`flex justify-center w-full h-32 px-4 transition ${
                 darkMode 
-                  ? 'bg-pink-300 border-pink-400 hover:border-white' 
+                  ? 'bg-pink-300 border-white hover:border-pink-500' 
                   : 'bg-gray-50 border-gray-300 hover:border-gray-400'
               } border-2 border-dotted rounded-lg appearance-none cursor-pointer focus:outline-none`}>
                 <div className="flex items-center space-x-2">
