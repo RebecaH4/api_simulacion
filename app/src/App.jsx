@@ -78,12 +78,12 @@ function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-200 ${
-      darkMode ? 'bg-gray-900' : 'bg-gray-50'
+      darkMode ? 'bg-white' : 'bg-gray-50'
     }`}>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className={`rounded-lg shadow-xl overflow-hidden ${
-          darkMode ? 'bg-gray-800' : 'bg-white'
+          darkMode ? 'bg-white' : 'bg-white'
         }`}>
           {/* Header Banner */}
           <div className="px-6 py-8 bg-gradient-to-r from-blue-600 to-pink-300 relative overflow-hidden">
