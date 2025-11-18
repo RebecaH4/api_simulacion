@@ -90,7 +90,7 @@ function App() {
             <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
             <div className="relative">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                Dividir archivos ARFF
+                Procesador de archivos ARFF
               </h2>
             </div>
           </div>
