@@ -86,7 +86,7 @@ function App() {
           darkMode ? 'bg-gray-800' : 'bg-white'
         }`}>
           {/* Header Banner */}
-          <div className="px-6 py-8 bg-gradient-to-r from-blue-600 to-indigo-600 relative overflow-hidden">
+          <div className="px-6 py-8 bg-gradient-to-r from-blue-600 to-pink-300 relative overflow-hidden">
             <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
             <div className="relative">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
@@ -102,7 +102,7 @@ function App() {
             <div className="max-w-xl mx-auto">
               <div className={`flex justify-center w-full h-32 px-4 transition ${
                 darkMode 
-                  ? 'bg-gray-900 border-gray-700 hover:border-gray-500' 
+                  ? 'bg-white border-white hover:border-gray-500' 
                   : 'bg-gray-50 border-gray-300 hover:border-gray-400'
               } border-2 border-dashed rounded-lg appearance-none cursor-pointer focus:outline-none`}>
                 <div className="flex items-center space-x-2">
@@ -126,19 +126,19 @@ function App() {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
                         </svg>
-                        <span className="text-lg font-medium">Procesando archivo...</span>
+                        <span className="text-lg font-medium">Cargndo...</span>
                       </div>
                     ) : (
                       <>
                         <svg className={`w-8 h-8 mb-2 ${
-                          darkMode ? 'text-gray-400' : 'text-gray-500'
+                          darkMode ? 'text-gray-900' : 'text-gray-900'
                         }`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                         </svg>
                         <div className={`text-center ${
-                          darkMode ? 'text-gray-300' : 'text-gray-600'
+                          darkMode ? 'text-gray-900' : 'text-gray-900'
                         }`}>
-                          <span className="font-medium">Haz clic para subir</span>
+                          <span className="font-medium">Subir Archivo</span>
                           <p className="text-xs mt-1">Solo archivos ARFF</p>
                         </div>
                       </>
@@ -170,12 +170,12 @@ function App() {
               darkMode ? 'bg-gray-800' : 'bg-white'
             }`}>
               <div className={`inline-flex items-center p-4 rounded-lg ${
-                darkMode ? 'bg-green-900/50 text-green-200' : 'bg-green-50 text-green-800'
+                darkMode ? 'bg-indigo-700 text-white' : 'bg-white text-white'
               }`}>
                 <svg className="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="font-medium">¡Archivo procesado!</span>
+                <span className="font-medium">Archivo procesado</span>
               </div>
               <div className="mt-6">
                 <a
