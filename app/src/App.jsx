@@ -97,7 +97,7 @@ function App() {
 
           {/* Upload Section */}
           <div className={`p-8 border-b ${
-            darkMode ? 'border-gray-700' : 'border-gray-200'
+            darkMode ? 'border-white' : 'border-gray-200'
           }`}>
             <div className="max-w-xl mx-auto">
               <div className={`flex justify-center w-full h-32 px-4 transition ${
@@ -131,7 +131,7 @@ function App() {
                     ) : (
                       <>
                         <svg className={`w-8 h-8 mb-2 ${
-                          darkMode ? 'text-gray-900' : 'text-gray-900'
+                          darkMode ? 'text-withe' : 'text-pink-500'
                         }`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                         </svg>
@@ -183,8 +183,8 @@ function App() {
                   download="nsl_kdd_splits.zip"
                   className={`inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm transition-colors ${
                     darkMode
-                      ? 'text-white bg-blue-600 hover:bg-blue-700'
-                      : 'text-white bg-blue-600 hover:bg-blue-700'
+                      ? 'text-white bg-pink-600 hover:bg-pink-700'
+                      : 'text-white bg-pink-600 hover:bg-pink-700'
                   }`}
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
