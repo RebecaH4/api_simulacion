@@ -90,7 +90,7 @@ function App() {
             <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
             <div className="relative">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                Archivos ARFF
+                Dividir archivos ARFF
               </h2>
             </div>
           </div>
@@ -138,7 +138,7 @@ function App() {
                         <div className={`text-center ${
                           darkMode ? 'text-gray-600' : 'text-gray-900'
                         }`}>
-                          <span className="font-medium">Haz clic para subir</span>
+                          <span className="font-medium">Subir archivo</span>
                           <p className="text-xs mt-1">Solo archivos ARFF</p>
                         </div>
                       </>
